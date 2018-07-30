@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AthleteComponent } from './athlete/athlete.component';
+import { AthleteFormComponent } from './athlete-form/athlete-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AthleteComponent
+    AthleteComponent,
+    AthleteFormComponent
   ],
   imports: [
     BrowserModule,
