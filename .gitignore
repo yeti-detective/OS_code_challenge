@@ -33,6 +33,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+mlabpw.js
 
 # System Files
 .DS_Store
