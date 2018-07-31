@@ -1,17 +1,23 @@
 module.exports = [
   {
-    _id: 1,
-    name: 'lebron',
-    sport: 'basketball'
+    athlete: {
+      name: 'lebron',
+      sport: 'basketball',
+      about: 'the GOAT'
+    }
   },
   {
-    _id: 2,
-    name: 'venus',
-    sport: 'tennis'
+    athlete: {
+      name: 'venus',
+      sport: 'tennis',
+      about: 'no wait. Venus is the GOAT'
+    }
   },
   {
-    _id: 3,
-    name: 'kaepernick',
-    sport: 'justice'
+    athlete: {
+      name: 'kaepernick',
+      sport: 'justice',
+      about: 'the ream MVP'
+    }
   }
 ];
