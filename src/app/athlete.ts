@@ -1,10 +1,10 @@
 export class Athlete {
-  // name: String;
-  // sport: String;
-  // about: String;
-  constructor(opts) {
-    this.name = opts.string;
-    this.sport = opts.string;
-    this.about = opts.string;
-  }
+  name: string;
+  sport: string;
+  about: string;
+  // constructor(opts) {
+  //   this.name = opts.string;
+  //   this.sport = opts.string;
+  //   this.about = opts.string;
+  // }
 }

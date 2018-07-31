@@ -9,16 +9,9 @@ import { Athlete } from '../athlete';
 })
 export class AthleteFormComponent implements OnInit {
   athlete: Athlete;
-  name: '';
-  sport: '';
-  about: '';
 
   constructor(private router: Router) {
-    this.athlete = new Athlete({
-      name: '',
-      sport: '',
-      about: ''
-    });
+    this.athlete = new Athlete();
   }
 
   postAthlete() {
