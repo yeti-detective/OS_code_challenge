@@ -15,6 +15,8 @@ const user = process.env.MUSER || require('./mlabpw').user;
 const pw = process.env.MPW || require('./mlabpw').pw;
 const defaultPlayers = require('./default-players');
 
+console.log(`user: ${user} | pw: ${pw}`);
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
