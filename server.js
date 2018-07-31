@@ -39,8 +39,10 @@ app.get('/:file', (req, res) => {
 });
 
 app.post('/new', (req, res) => {
+  // i know this line is ridiculous, i am sorry
+  const athlete = Object.keys(req.body)[0];
   db.collection('athletes')
-    .insert({ athlete: req.body })
+    .insert(JSON.parse(athlete))
     .then(res.json({ ok: true }));
 });
 
