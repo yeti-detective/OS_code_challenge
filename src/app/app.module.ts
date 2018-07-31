@@ -15,7 +15,7 @@ import { AthleteFormComponent } from './athlete-form/athlete-form.component';
     AthleteComponent,
     AthleteFormComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

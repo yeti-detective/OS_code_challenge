@@ -1,12 +1,12 @@
-<form>
-  <label>Name
-    <input type="text" placeholder="enter name" />
+<div>
+  <label>{{athlete.name || 'Name'}}<br />
+    <input [(ngModel)]="athlete.name" type="text" placeholder="enter name" />
   </label><br />
-  <label>Sport
-    <input type="text" placeholder="enter sport" />
+  <label>Sport<br />
+    <input [(ngModel)]="athlete.sport" type="text" placeholder="enter sport" />
   </label><br />
-  <label>Bio
-    <textarea placeholder="athlete bio"></textarea>
+  <label>About<br />
+    <textarea [(ngModel)]="athlete.about" placeholder="athlete bio"></textarea>
   </label><br />
-  <input type="submit" />
-</form>
+  <button (click)="postAthlete()">Submit</button>
+</div>

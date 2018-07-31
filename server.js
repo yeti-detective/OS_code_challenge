@@ -38,9 +38,9 @@ app.get('/:file', (req, res) => {
   );
 });
 
-app.post('/new/:id', (req, res) => {
+app.post('/new', (req, res) => {
   db.collection('athletes')
-    .insert({ _id: req.params.id, athlete: req.body })
+    .insert({ athlete: req.body })
     .then(res.json({ ok: true }));
 });
 
