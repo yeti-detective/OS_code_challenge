@@ -21,7 +21,6 @@ export class DashboardComponent implements OnInit {
         JSON.parse(xhr.response).forEach(athlete => {
           this.athletes.push(athlete);
         });
-        // console.log(this.athletes);
       }
     };
     xhr.send();

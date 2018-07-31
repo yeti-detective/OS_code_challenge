@@ -9,6 +9,9 @@ import { Athlete } from '../athlete';
 })
 export class AthleteFormComponent implements OnInit {
   athlete: Athlete;
+  name: '';
+  sport: '';
+  about: '';
 
   constructor(private router: Router) {
     this.athlete = new Athlete({
@@ -23,11 +26,11 @@ export class AthleteFormComponent implements OnInit {
     xhr.open('POST', '/new');
     xhr.onreadystatechange = () => {
       if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        // const router = new Router();
         this.router.navigateByUrl('/main');
       }
     };
-    xhr.send(this.athlete);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send(JSON.stringify({ athlete: this.athlete }));
   }
 
   ngOnInit() {}

@@ -1,7 +1,17 @@
 <div *ngIf="athletes">
-  <p>
-    there are some athletes
-  </p>
+  <ul>
+    <li *ngFor="let athlete of athletes">
+      <p>
+        {{athlete.athlete.name}}
+      </p>
+      <p>
+        {{athlete.athlete.sport}}
+      </p>
+      <p>
+        {{athlete.athlete.about}}
+      </p>
+    </li>
+  </ul>
 </div>
 <a routerLink="/athlete/1">Athlete</a>
 <br />
