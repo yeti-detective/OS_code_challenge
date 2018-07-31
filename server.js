@@ -11,7 +11,8 @@ const asyncHandler = require('express-async-handler');
 
 let db;
 
-const creds = process.env.MPW || require('./mlabpw');
+const user = process.env.MUSER || require('./mlabpw').user;
+const pw = process.env.MPW || require('./mlabpw').pw;
 const defaultPlayers = require('./default-players');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -57,7 +58,7 @@ app.delete(
 );
 
 mongo.connect(
-  `mongodb://${creds.user}:${creds.pw}@ds159631.mlab.com:59631/opensponsorship`,
+  `mongodb://${user}:${pw}@ds159631.mlab.com:59631/opensponsorship`,
   (err, database) => {
     if (err) throw err;
     db = database;
